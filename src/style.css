@@ -1,11 +1,38 @@
 body {
     background: linear-gradient(90deg, rgba(10,20,40,1) 11%, rgba(3,151,171,1) 44%, rgba(9,20,40,1) 96%);
 }
- h1 {
-    color: #C89B3C;
+header{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #091428;
+   flex-direction: column;
+}
+header h1{
+   border: #C8AA6E;
+   padding: 20px;
+   color: #C89B3C;
+   width: 100%;
+   text-align: center;
+   
+}
+.champions-cards {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   margin-top: 20px;
  }
-
- p {
-    font: white;
-    color: aliceblue;
+ 
+ .champions-cards .card {
+   width: 30%;
+   margin-bottom: 20px;
+   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+   border-radius: 5px;
+   overflow: hidden;
+   border: 2px solid #785A28;
+   background-color: #F0E6D2;
+ }
+ .card img{
+   max-width: 100%;
+   height: auto;
  }

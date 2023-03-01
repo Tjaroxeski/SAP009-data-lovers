@@ -27,7 +27,8 @@ function showCards() {
         <p class="champion-power">Nível de Defesa: ${champion.info.defense}</p>
         <p class="champion-power">Nível de Magia: ${champion.info.magic}</p>
         <p class="champion-power">Nível de Dificuldade: ${champion.info.difficulty}</p>
-        <button class="more" id="${index}">More</button>
+        <p>Função: ${champion.tags.join(" / ")}</p>
+        
       </div>
     `)
     .join("");
