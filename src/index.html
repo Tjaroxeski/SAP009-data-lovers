@@ -2,10 +2,10 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewpoint" content="widht=device-width, initial-scale="1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Data Lovers- LOL</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
+</head>
   <body>
     <nav class="nav"> 
       <ol>
@@ -15,12 +15,9 @@
     </nav>
     <header class="header">
       <h1> League Of Legends - Data Lovers </h1>
-     
     </header>
       <main>
-        
-
-        <section class ="pequenaexplicação">
+       <section class ="pequenaexplicação">
           <p> Iniciando sua trajetória em League Of Legends,  mas ainda tem dúvidas na hora de escolher seu campeão ? </p>
           <p> Nós te ajudamos!</p>
           <p> Encontre aqui o campeão que melhor se encaixa com seu estilo de jogo </p>
@@ -28,22 +25,25 @@
           
          <div class="search-conteiner">
           <h2> Iniciar Jornada</h2>
-          <input type="text" id="search" name="search" onkeyup="filterNames()"  placeholder="Buscar por nome" list="champions-list" >
+          <input type="text" id="search" name="search" placeholder="Buscar por nome" list="champions-list" >
           <datalist id="champions-list"></datalist>
           </div>
-        
-          <div>
-            <input type="text"   id = "text" name = "funçoes" placeholder="Buscar por funções" >
-            <div id="filtered-list"></div>
-          </div>
-        </section>
-
+           <form class="search-by-function" id="escolher">
+            <fieldset>
+             <legend>Escolha pela função</legend>
+              <div>
+               <input type="checkbox"  name="assassin" > Assassino
+               <input type="checkbox" name="Marksman"> Atirador
+               <input type="checkbox" name="Mage">Mago 
+               <input type="checkbox" name="Support"> Suporte  
+               input type="checkbox" name="Tank"> Tanque
+            </div>
+           </fieldset>
+          </form>
         <section>
           <article class="card">
             <div class="champions-cards"></div>
-            
-        
-      </section>
+         </section>
       </main>
     <script src="main.js" type="module"></script>
      

@@ -1,7 +1,13 @@
-export const champions ={ 
-  alphabeticOrderFilter: function alphabeticOrderFilter(){
 
-
-
-  }
+function filterByTags(tags) {
+  const filteredChampions = championsArray.filter((champion) => {
+    return tags.some(tag => champion.tags.includes(tag));
+  });
+  return filteredChampions;
 }
+
+
+
+export {filterByTags} ;
+
+
