@@ -1,5 +1,5 @@
 import data from "./data/lol/lol.js";
-import {filterByTags} from "./data.js";
+// import {orderByDifficulty, filterByTags} from "./data.js";
 
 const allChampions = data.data;
 const inputChampions = document.getElementById("search");
