@@ -1,10 +1,12 @@
 
-// function filterByTags(tags) {
-//   const filteredChampions = championsArray.filter((champion) => {
-//     return tags.some(tag => champion.tags.includes(tag));
-//   });
-//   return filteredChampions;
-// }
+function filterByTags(champions, tags) {
+  const filteredChampions = champions.filter((champion) => {
+    return tags.some(tag => champion.tags.includes(tag));
+  });
+  return filteredChampions;
+}
+
+
 // function orderByDifficulty(champions) {
 //   // Cria um array a partir dos valores do objeto
 //   const championArray = Object.values(champions);
@@ -14,11 +16,16 @@
   
 //   return championArray;
 // }
+// console.log("ola");
 // interactionCards.innerHTML = championsHTML;
 
 // inputChampions.addEventListener("keyup", showCards);
 
-
-export {filterByTags, orderByDifficulty} ;
+// function filterByTags(checkbox) {
+//   return checkbox.filter(function( ){
+//     return numero %2 ===0;
+//   });
+// }
+export {filterByTags,} ;
 
 

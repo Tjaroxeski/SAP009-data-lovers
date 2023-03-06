@@ -1,10 +1,11 @@
 import data from "./data/lol/lol.js";
-// import {orderByDifficulty, filterByTags} from "./data.js";
+import {filterByTags } from "./data.js";
 
 const allChampions = data.data;
 const inputChampions = document.getElementById("search");
 const interactionCards = document.querySelector(".champions-cards");
 const championsArray = Object.values(allChampions);
+
 
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 const selectedOptions = [];
@@ -18,7 +19,8 @@ checkboxes.forEach(checkbox => {
         selectedOptions.splice(index, 1);
       }
     }
-    console.log(selectedOptions);
+    const filtered = filterByTags(championsArray, selectedOptions)
+    showCards(filtered);
   });
 });
 
@@ -45,9 +47,9 @@ function filterNames() {
   return filteredList;
 }
 
-function showCards() {
-  const filteredChampions = filterNames();
-  const championsHTML = filteredChampions
+function showCards(champions) {
+  
+  const championsHTML = champions
     .map((champion, index) => `
       <div class="card">
         <img id="${index}" class="posters" src="${champion.splash}" alt="champion image">
@@ -61,9 +63,14 @@ function showCards() {
       </div>
     `)
     .join("");
+    
+  
   interactionCards.innerHTML = championsHTML;
 }
-inputChampions.addEventListener("keyup", showCards);
+inputChampions.addEventListener("keyup", function(){
+  const filteredChampions = filterNames();
+  showCards(filteredChampions)
+});
 
 
 
