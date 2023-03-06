@@ -1,23 +1,20 @@
-import { example, anotherExample } from '../src/data.js';
+import {filterByTags} from '../src/data.js';
+const ashe={ 
+  name: "Ashe",  
+  tags: ["Marksman", "Support"],
+}
+const caitlyn = {
+  name: "Caitlyn",
+  tags: ["Marksman"],
 
+}
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
-
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
-
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
+const corki= {
+  name: "Corki",
+  tags: ["Marksman"],
+}
+const champions=[ashe, caitlyn, corki]
+it ("deve filtrar campeões por tags",()=>{
+  const resultado = filterByTags(champions,["Support"])
+  expect(resultado).toEqual([ashe])
 });
