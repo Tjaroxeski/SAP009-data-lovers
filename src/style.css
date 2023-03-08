@@ -36,10 +36,17 @@ h2{
   color: darkgoldenrod;
 }
 
-nav ol{
+.search-by-function {
+  color: #C89B3C;
+}
+
+.nav ul a{
+  color: #C89B3C;
   font-style: normal;
   display: flex;
   justify-content: flex-end;
+  text-decoration: none;
+  
 }
 
 #search{
@@ -69,4 +76,30 @@ nav ol{
  .card img{
    max-width: 100%;
    height: auto;
+ }
+ @media (max-width: 528px) {
+
+  .header{ 
+    display: auto ;
+    flex-direction: row;
+    font-size: 10px;
+    margin:auto;
+   }
+
+   .header h2{
+    font-size: 10%;
+   }
+  
+ .champions-cards .card{
+  width: 80%;
+  max-width: 528px;
+  margin: auto;
+  /* display: grid; */ /*sem isso, o card ficou mais miudinho 
+  /* grid-template-columns: 310px 310px 310px; */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* isso alinha as informaçoes dentro do card 
+  /* grid-gap: 20px; */
+  /* font-size: 17px; /*tamanho da letra de dentro do card no responsivo telas pequenas  */
+  /* line-height:0% */
+ } 
+ 
  }
