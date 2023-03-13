@@ -6,7 +6,11 @@ function filterByTags(champions, tags) {
   return filteredChampions;
 }
 
-
+function sortByDifficulty(data) {
+  const result = Object.values(data).sort((a, b) => a.info.difficulty - b.info.difficulty);
+ return result;
+  // console.log(result);
+}
 // function orderByDifficulty(champions) {
 //   // Cria um array a partir dos valores do objeto
 //   const championArray = Object.values(champions);
@@ -26,6 +30,6 @@ function filterByTags(champions, tags) {
 //     return numero %2 ===0;
 //   });
 // }
-export {filterByTags,} ;
+export {filterByTags, sortByDifficulty} ;
 
 
