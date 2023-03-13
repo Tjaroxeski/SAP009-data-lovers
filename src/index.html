@@ -22,16 +22,19 @@
           <p> Nós te ajudamos!</p>
           <p> Encontre aqui o campeão que melhor se encaixa com seu estilo de jogo </p>
           </section>
-          
-         <div class="search-conteiner">
+          <section>
+          <div class="search-conteiner">
           <h2> Iniciar Jornada</h2>
           <input type="text" id="search" name="search" placeholder="Buscar por nome" list="champions-list" >
           <datalist id="champions-list"></datalist>
           </div>
+          <hr class="space">
+          
            <form class="search-by-function" id="escolher">
+           </div>
             <fieldset>
              <legend>Escolha pela função</legend>
-              <div>
+              <div class="checkbox-check">
                <input type="checkbox"  name="Assassin" > Assassino
                <input type="checkbox" name="Marksman"> Atirador
                <input type="checkbox" name="Mage">Mago 
@@ -39,16 +42,27 @@
                <input type="checkbox" name="Tank"> Tanque
             </div>
            </fieldset>
+
+           <hr class="space">
+            <legend> Ordenar pelo nível de dificuldade</legend>
+             <select class="difficulty-order" id="order">
+              <option disabled selected hidden> </option>
+              <option value="easy-hard" id="easy-hard">Dificuldade em ordem crescente </option>
+              <option value="hard-easy" id="hard-easy" >Dificuldade em ordem decrescente</option>
+             </select>
+
+           <!-- <div>
+            <p id="difficulty">Escolha pelo nível de dificuldade</p>
+            <input type="range" class="search-by-function" min="1" max="10" id="myRange" value="5"> -->
           </form>
+        </section>
         <section>
           <article class="card">
+          
             <div class="champions-cards"></div>
+          </article>
          </section>
       </main>
     <script src="main.js" type="module"></script>
-     
-
-  
-
   </body>
 </html>

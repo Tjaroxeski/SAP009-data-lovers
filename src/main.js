@@ -1,10 +1,33 @@
 import data from "./data/lol/lol.js";
-import {filterByTags } from "./data.js";
+import {filterByTags, sortByDifficulty } from "./data.js";
 
 const allChampions = data.data;
 const inputChampions = document.getElementById("search");
 const interactionCards = document.querySelector(".champions-cards");
 const championsArray = Object.values(allChampions);
+
+const inputRange = document.getElementById("myRange");
+const difficultyText = document.getElementById("difficulty");
+
+inputRange.addEventListener("input", function() {
+  let value = parseInt(this.value);
+  let difficultyLevel;
+
+  if (value >= 1 && value <= 4) {
+    difficultyLevel = "Fácil";
+  } else if (value >= 5 && value <= 8) {
+    difficultyLevel = "Médio";
+  } else if (value >= 9 && value <= 10) {
+    difficultyLevel = "Difícil";
+  }
+  difficultyText.innerText = `Escolha pelo nível de dificuldade ${ difficultyLevel}`
+  console.log(`Valor do input range: ${value}. Dificuldade: ${difficultyLevel}`);
+ 
+  const filteredByDiff= sortByDifficulty(championsArray);
+  showCards(filteredByDiff);
+});
+
+
 
 
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
