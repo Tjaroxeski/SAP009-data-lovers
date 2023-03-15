@@ -1,34 +1,26 @@
 import data from "./data/lol/lol.js";
-import {filterByTags, sortByDifficulty } from "./data.js";
+import {filterByTags, orderChampionsByDifficulty } from "./data.js";
 
 const allChampions = data.data;
 const inputChampions = document.getElementById("search");
 const interactionCards = document.querySelector(".champions-cards");
 const championsArray = Object.values(allChampions);
 
-const inputRange = document.getElementById("myRange");
-const difficultyText = document.getElementById("difficulty");
-
-inputRange.addEventListener("input", function() {
-  let value = parseInt(this.value);
-  let difficultyLevel;
-
-  if (value >= 1 && value <= 4) {
-    difficultyLevel = "Fácil";
-  } else if (value >= 5 && value <= 8) {
-    difficultyLevel = "Médio";
-  } else if (value >= 9 && value <= 10) {
-    difficultyLevel = "Difícil";
-  }
-  difficultyText.innerText = `Escolha pelo nível de dificuldade ${ difficultyLevel}`
-  console.log(`Valor do input range: ${value}. Dificuldade: ${difficultyLevel}`);
  
-  const filteredByDiff= sortByDifficulty(championsArray);
-  showCards(filteredByDiff);
+ 
+
+const selectElement = document.getElementById('order');
+//pegar os elementos do id order
+
+selectElement.addEventListener('change', function() {
+  const selectedOption = this.value;
+  //guarda o valor selecionado na variável 
+  const ordenados = orderChampionsByDifficulty(championsArray, selectedOption);
+  showCards(ordenados);
+  //const criada para guardar o valor da ordem de dificuldade do data, de acordo com a array dos campeoes e a opçao selecionada 
+  //por fim mostra na tela os cards da dificuldade escolhida 
+
 });
-
-
-
 
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 const selectedOptions = [];
