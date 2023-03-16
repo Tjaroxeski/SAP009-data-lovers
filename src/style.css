@@ -13,7 +13,6 @@ body {
    padding: 5rem;
    color: #785A28;
    background-image: url(https://giffiles.alphacoders.com/276/2766.gif);
-
 }
 header h1 {
    border: #C8AA6E;
@@ -38,8 +37,11 @@ h2{
 
 .search-by-function {
   color: #C89B3C;
+  
 }
-
+fieldset{
+  border-color: #C89B3C;
+}
 .nav ul a{
   color: #C89B3C;
   font-style: normal;
@@ -51,6 +53,8 @@ h2{
 
 #search{
   border-radius: 10px;
+  
+
 }
 #text {
   border-radius: 10px;
@@ -81,16 +85,12 @@ h2{
  
  @media (max-width: 768px) {
  html {
-  font-size: 50%;
+  font-size: auto;
  }
  }
  
  @media (max-width: 630px){
-
- 
-
- 
-  .header{ 
+ .header{ 
     display: auto ;
     flex-direction: row;
     font-size: 10px;
@@ -98,14 +98,20 @@ h2{
    }
 
    .header h2{
-    font-size: 10%;
+    font-size:xx-small;
    }
   
  .champions-cards .card{
   width: 80%;
   max-width: 528px;
   margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* isso alinha as informaçoes dentro do card */
  }
+
+.checkbox-check{
+  display: flex;
+}
+ 
 
 
 
@@ -113,10 +119,11 @@ h2{
 
   /* display: grid; */ /*sem isso, o card ficou mais miudinho 
   /* grid-template-columns: 310px 310px 310px; */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* isso alinha as informaçoes dentro do card 
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* isso alinha as informaçoes dentro do card  */
   /* grid-gap: 20px; */
   /* font-size: 17px; /*tamanho da letra de dentro do card no responsivo telas pequenas  */
   /* line-height:0% */
  } 
+ 
  
  
