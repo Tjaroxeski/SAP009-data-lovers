@@ -7,25 +7,18 @@ function filterByTags(champions, tags) {
 }
 
 
-// function orderByDifficulty(champions) {
-//   // Cria um array a partir dos valores do objeto
-//   const championArray = Object.values(champions);
-  
-//   // Ordena o array com base no nível de dificuldade
-//   championArray.sort((a, b) => a.info.difficulty - b.info.difficulty);
-  
-//   return championArray;
-// }
-// console.log("ola");
-// interactionCards.innerHTML = championsHTML;
+function orderChampionsByDifficulty(champions, order) {
+  const championsArray = Object.values(champions);
 
-// inputChampions.addEventListener("keyup", showCards);
+  if (order === "easy-hard") {
+    championsArray.sort((a, b) => a.info.difficulty - b.info.difficulty);
+  } else if (order === "hard-easy") {
+    championsArray.sort((a, b) => b.info.difficulty - a.info.difficulty);
+  }
+  
+  return championsArray;
+}
 
-// function filterByTags(checkbox) {
-//   return checkbox.filter(function( ){
-//     return numero %2 ===0;
-//   });
-// }
-export {filterByTags,} ;
+export {filterByTags, orderChampionsByDifficulty} ;
 
 
