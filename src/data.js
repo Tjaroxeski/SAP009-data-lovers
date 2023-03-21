@@ -21,4 +21,7 @@ function orderChampionsByDifficulty(champions, order) {
 
 export {filterByTags, orderChampionsByDifficulty} ;
 
-
+//Cálculo agregado de porcentagem dos campeões
+export const allChampions = (allChampions,orderChampionsByDifficulty) => {
+  return (( orderChampionsByDifficulty/allChampions * 100)).toFixed(2);
+}
