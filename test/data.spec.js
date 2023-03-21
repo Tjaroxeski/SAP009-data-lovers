@@ -82,3 +82,12 @@ describe('orderChampionsByDifficulty', () => {
   })
 });
 
+//testando o cálculo de porcentagem
+describe('allChampions'() => {
+  it('deve ser uma função', () => {
+    expect(typeof ).toBe("function");
+  });
+  it('retorna a porcentagem da pesquisa do usuário', () => {
+    expect(allChampions()).toBe("orderChampionsByDifficulty");
+  })
+});
