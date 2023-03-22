@@ -1,25 +1,17 @@
 import data from "./data/lol/lol.js";
-import {filterByTags, orderChampionsByDifficulty } from "./data.js";
+import {filterByTags, orderChampionsByDifficulty, calculateDifficultyPercentage } from "./data.js";
 
 const allChampions = data.data;
 const inputChampions = document.getElementById("search");
 const interactionCards = document.querySelector(".champions-cards");
 const championsArray = Object.values(allChampions);
-
- 
- 
-
 const selectElement = document.getElementById('order');
-//pegar os elementos do id order
 
 selectElement.addEventListener('change', function() {
   const selectedOption = this.value;
-  //guarda o valor selecionado na variável 
   const ordenados = orderChampionsByDifficulty(championsArray, selectedOption);
   showCards(ordenados);
-  //const criada para guardar o valor da ordem de dificuldade do data, de acordo com a array dos campeoes e a opçao selecionada 
-  //por fim mostra na tela os cards da dificuldade escolhida 
-
+  showPercent(championsArray, selectedOption); 
 });
 
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
@@ -63,7 +55,6 @@ function filterNames() {
 }
 
 function showCards(champions) {
-  
   const championsHTML = champions
     .map((champion, index) => `
       <div class="card">
@@ -78,8 +69,6 @@ function showCards(champions) {
       </div>
     `)
     .join("");
-    
-  
   interactionCards.innerHTML = championsHTML;
 }
 inputChampions.addEventListener("keyup", function(){
@@ -87,6 +76,11 @@ inputChampions.addEventListener("keyup", function(){
   showCards(filteredChampions)
 });
 
+function showPercent (champions, difficulty) {
+  const percentage = calculateDifficultyPercentage(champions, difficulty);
+  const resultElement = document.getElementById("show-percent");
+  resultElement.innerHTML= `A porcentagem de campeões nesse nível de difuldade é de ${percentage} % do total `;
+}
 
 
 
