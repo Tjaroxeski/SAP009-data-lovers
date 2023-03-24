@@ -5,19 +5,25 @@ const allChampions = data.data;
 const inputChampions = document.getElementById("search");
 const interactionCards = document.querySelector(".champions-cards");
 const championsArray = Object.values(allChampions);
-const selectElement = document.getElementById('order');
+const selectElement = document.getElementById("order");
+const cleanFilterOption = document.getElementById("clean-filter");
 
-selectElement.addEventListener('change', function() {
+
+selectElement.addEventListener("change", function() {
   const selectedOption = this.value;
   const ordenados = orderChampionsByDifficulty(championsArray, selectedOption);
-  showCards(ordenados);
+  if(selectedOption === "clean"){
+    clearScreen(cleanFilterOption, showPercent);
+  } else {
+    showCards(ordenados);
+  }
   showPercent(championsArray, selectedOption); 
 });
 
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 const selectedOptions = [];
 checkboxes.forEach(checkbox => {
-  checkbox.addEventListener('change', (event) => {
+  checkbox.addEventListener("change", (event) => {
     if (event.target.checked) {
       selectedOptions.push(event.target.name);
     } else {
@@ -70,7 +76,14 @@ function showCards(champions) {
     `)
     .join("");
   interactionCards.innerHTML = championsHTML;
+  const cards = document.querySelectorAll(".card");
+  cards.forEach(card => {
+    if (card.style.display === "none") {
+      card.style.display = "block";
+    }
+  });
 }
+
 inputChampions.addEventListener("keyup", function(){
   const filteredChampions = filterNames();
   showCards(filteredChampions)
@@ -79,13 +92,16 @@ inputChampions.addEventListener("keyup", function(){
 function showPercent (champions, difficulty) {
   const percentage = calculateDifficultyPercentage(champions, difficulty);
   const resultElement = document.getElementById("show-percent");
-  resultElement.innerHTML= `A porcentagem de campeões nesse nível de difuldade é de ${percentage} % do total `;
+  resultElement.innerHTML= `A porcentagem de campeões nesse nível de dificuldade é de ${percentage} % do total `;
 }
 
-
-
-
-
-
-
+function clearScreen(){
+  const cards = document.querySelectorAll(".card");
+  const percentMsg = document.getElementById("show-percent");
+  for(let i=0; i < cards.length; i++){
+    cards[i].style.display = "none";
+  }
+  percentMsg.style.display = "none";
+  selectElement.value = "";
+}
 

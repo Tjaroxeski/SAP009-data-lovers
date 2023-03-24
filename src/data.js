@@ -7,13 +7,15 @@ function filterByTags(champions, tags) {
 }
 
 function orderChampionsByDifficulty(champions, order) {
-  const championsArray = Object.values(champions);
+  console.log(order);
   if (order === "easy-hard") {
-    championsArray.sort((a, b) => a.info.difficulty - b.info.difficulty);
+    
+    champions.sort((a, b) => a.info.difficulty - b.info.difficulty);
   } else if (order === "hard-easy") {
-    championsArray.sort((a, b) => b.info.difficulty - a.info.difficulty);
+    champions.sort((a, b) => b.info.difficulty - a.info.difficulty);
   }
-  return championsArray;
+  console.log(champions);
+  return champions;
 }
 
 function calculateDifficultyPercentage(champions, difficulty) {
