@@ -7,11 +7,14 @@ function filterByTags(champions, tags) {
 }
 
 function orderChampionsByDifficulty(champions, order) {
+  console.log(order);
   if (order === "easy-hard") {
+    
     champions.sort((a, b) => a.info.difficulty - b.info.difficulty);
   } else if (order === "hard-easy") {
     champions.sort((a, b) => b.info.difficulty - a.info.difficulty);
   }
+  console.log(champions);
   return champions;
 }
 
