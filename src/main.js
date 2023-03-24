@@ -6,17 +6,16 @@ const inputChampions = document.getElementById("search");
 const interactionCards = document.querySelector(".champions-cards");
 const championsArray = Object.values(allChampions);
 const selectElement = document.getElementById("order");
-const cleanFilterOption = document.getElementById("clean-filter");
 
-
+window.addEventListener("load",()=>{
+  const ordenados = orderChampionsByDifficulty(championsArray,"easy-hard");
+  showCards(ordenados)
+});
 selectElement.addEventListener("change", function() {
   const selectedOption = this.value;
   const ordenados = orderChampionsByDifficulty(championsArray, selectedOption);
-  if(selectedOption === "clean"){
-    clearScreen(cleanFilterOption, showPercent);
-  } else {
-    showCards(ordenados);
-  }
+  showCards(ordenados);
+
   showPercent(championsArray, selectedOption); 
 });
 
@@ -95,13 +94,4 @@ function showPercent (champions, difficulty) {
   resultElement.innerHTML= `A porcentagem de campeões nesse nível de dificuldade é de ${percentage} % do total `;
 }
 
-function clearScreen(){
-  const cards = document.querySelectorAll(".card");
-  const percentMsg = document.getElementById("show-percent");
-  for(let i=0; i < cards.length; i++){
-    cards[i].style.display = "none";
-  }
-  percentMsg.style.display = "none";
-  selectElement.value = "";
-}
 
