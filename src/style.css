@@ -59,6 +59,12 @@ fieldset{
 #text {
   border-radius: 10px;
 }
+.difficulty-order {
+
+border-radius: 10px;
+}
+
+
 
 .champions-cards {
    display: flex;
