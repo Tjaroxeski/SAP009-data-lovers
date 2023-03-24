@@ -5,9 +5,9 @@ const allChampions = data.data;
 const inputChampions = document.getElementById("search");
 const interactionCards = document.querySelector(".champions-cards");
 const championsArray = Object.values(allChampions);
-const selectElement = document.getElementById('order');
+const selectElement = document.getElementById("order");
 
-selectElement.addEventListener('change', function() {
+selectElement.addEventListener("change", function() {
   const selectedOption = this.value;
   const ordenados = orderChampionsByDifficulty(championsArray, selectedOption);
   showCards(ordenados);
@@ -17,7 +17,7 @@ selectElement.addEventListener('change', function() {
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 const selectedOptions = [];
 checkboxes.forEach(checkbox => {
-  checkbox.addEventListener('change', (event) => {
+  checkbox.addEventListener("change", (event) => {
     if (event.target.checked) {
       selectedOptions.push(event.target.name);
     } else {
