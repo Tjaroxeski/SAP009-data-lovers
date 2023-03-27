@@ -82,3 +82,6 @@ Para realizar  esse projeto foi necessário desenvolver um Cálculo  agregado pa
 
 exemplo;  A porcentagem de campeões nesse nível de dificuldade é de 52.24 % do total.
 
+## 7.Prototipo
+![WhatsApp Image 2023-03-27 at 14 06 06](https://user-images.githubusercontent.com/98469519/228025081-c97252fb-2cba-4fb6-b7c3-1ec7ee43a0e3.jpeg)
+
