@@ -65,8 +65,9 @@ Reflita e depois enumere os objetivos que quer alcançar e aplique no seu projet
 
 ## 4. Pesquisa
 
-para iniciar nosso Projeto definimos um planejamento para entender esse usuário, fizemos pesquisas para entregar um layout fiel ao do jogo original, escolhemos uma paleta de cores com o tema, isso incluí filtros e ordenação facilitada para o usuário, para que seja uma experiência agradável e intuitiva.
+Para iniciar nosso Projeto definimos um planejamento para entender esse usuário, fizemos pesquisas para entregar um layout fiel ao do jogo original, escolhemos uma paleta de cores com o tema, isso incluí filtros e ordenação facilitada para o usuário, para que seja uma experiência agradável e intuitiva.
 Paleta de cores
+
 ![WhatsApp Image 2023-03-27 at 14 56 33](https://user-images.githubusercontent.com/98469519/228026807-0c4f8512-354c-4f55-8493-013bcf624ca9.jpeg)
 
 
@@ -86,9 +87,11 @@ exemplo;  A porcentagem de campeões nesse nível de dificuldade é de 52.24 % d
 
 ## 7.Prototipo
 Protótipo baixa fidelidade
+
 ![WhatsApp Image 2023-03-27 at 14 06 06](https://user-images.githubusercontent.com/98469519/228025081-c97252fb-2cba-4fb6-b7c3-1ec7ee43a0e3.jpeg)
 
 Protótipo Alta fidelidade
+
 ![WhatsApp Image 2023-03-27 at 14 56 12](https://user-images.githubusercontent.com/98469519/228026779-e5dc0bdd-eec4-4fce-85f3-d9fcda4d21dc.jpeg)
 
 
