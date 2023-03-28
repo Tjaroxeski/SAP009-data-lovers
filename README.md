@@ -36,7 +36,7 @@ parte direita.
 
 ## 2. Resumo do projeto
 
-Esse projeto tem como Tema o game League of Legends, ele foi desenvolvido em dupla, durante o andamento do projeto dedicamos uma série de recursos para desenvolver etapas e alcançar os objetivos de aprendizagem. Para visulizar o projeto[acesse aqui] (https://tataschultz.github.io/SAP009-data-lovers/)
+Esse projeto tem como Tema o game League of Legends, ele foi desenvolvido em dupla, durante o andamento do projeto dedicamos uma série de recursos para desenvolver etapas e alcançar os objetivos de aprendizagem. Para visulizar o projeto ![acesse aqui] (https://tataschultz.github.io/SAP009-data-lovers/)
 
 
 A primeira etapa foi desenvolver um protótipo de baixa e alta fidelidade, depois pensamos numa historia de usuário para ajudar no acesso da primeira experiência do jogador.
