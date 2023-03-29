@@ -75,14 +75,7 @@ function showCards(champions) {
     `)
     .join("");
   interactionCards.innerHTML = championsHTML;
-  const cards = document.querySelectorAll(".card");
-  cards.forEach(card => {
-    if (card.style.display === "none") {
-      card.style.display = "block";
-    }
-  });
 }
-
 inputChampions.addEventListener("keyup", function(){
   const filteredChampions = filterNames();
   showCards(filteredChampions)
